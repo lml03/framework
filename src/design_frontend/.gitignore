@@ -1,0 +1,9 @@
+/dist/
+/node_modules/
+/bower_components/
+/test/coverage/
+.sass-cache
+/.idea
+/geoJson/china-main-city/tempFile.json
+static/js/vendor.js
+static/js/vendor.js

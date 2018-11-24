@@ -1,0 +1,25 @@
+@charset "UTF-8";
+body,div,h1,h2,h3,h4,h5,h6,li,ul,p{ margin:0;padding:0 }
+body{font-size:16px;font-family:"Microsoft YaHei",Arial,"微软雅黑",sans-serif;background: #f4f4f4; }
+html,body{
+    height: 100%;
+}
+li{list-style:none}
+em,i{font-style:normal}
+//input,select,textarea{border:0;outline:0}
+img{border:none;border:0;vertical-align:middle}
+a{text-decoration:none;}
+*{
+    box-sizing: border-box;
+}
+input,textarea,select,button{
+    font-size:14px;
+    outline: 0;
+}
+.el-select .el-input .el-input__icon { -ms-transform: translateY(-50%) rotate(180deg) }
+.el-message { -ms-transform: translateX(-50%); }
+.input_select i { -ms-transform: translateY(-50%) rotate(180deg); }
+.input_select .is_reverse { -ms-transform: translateY(-50%); transform: translateY(-50%); }
+.el-checkbox .el-checkbox__input .el-checkbox__inner:after { -ms-transform: rotate(45deg) scaleY(1); }
+.el-input .el-input__inner { vertical-align: middle; }
+.placeholder { line-height: 34px }

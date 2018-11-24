@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>头部底部固定布局</title>
+    <link href="../assets/css/reset.css" rel="stylesheet" />
+    <link href="../assets/css/common.css" rel="stylesheet" />
+    <style type="text/css">
+        .header-wrap{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        .sider-wrap{
+            width: 200px;
+        }
+        .main-wrap{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 64px;
+            bottom: 50px;
+            overflow-y: scroll;
+            display: flex;
+        }
+        .main-content{
+            flex: 1;
+        }
+        .footer-wrap{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <section class="header-wrap">
+        <header-component :navlist="navlist"></header-component>
+    </section>
+    <section class="main-wrap">
+        <sider-component :menulist="menulist" class="sider-wrap"></sider-component>
+        <main-component class="main-content"></main-component>
+    </section>
+    <section class="footer-wrap">
+        <footer-component></footer-component>
+    </section>
+</div>
+
+<script src="../assets/js/vue.min.js"></script>
+<script src="../component/header.js"></script>
+<script src="../component/sider.js"></script>
+<script src="../component/main.js"></script>
+<script src="../component/footer.js"></script>
+<script>
+let menulist = [
+    { 
+        id: 1, 
+        name: '一级目录1',
+        showChildren: true,
+        children: [
+            {
+                id: 11,
+                name: '一级目录11'
+            },
+            {
+                id: 12,
+                name: '一级目录12'
+            }
+        ]
+    },
+    { 
+        id: 2, 
+        name: '一级目录2',
+        showChildren: false,
+        children: [
+            {
+                id: 21,
+                name: '一级目录21'
+            },
+            {
+                id: 22,
+                name: '一级目录22'
+            }
+        ] 
+    },
+    {
+        id: 3,
+        name: '一级目录3',
+        showChildren: false,
+        children: [
+            {
+                id: 31,
+                name: '二级目录31'
+            },
+            {
+                id: 32,
+                name: '二级目录32'
+            }
+        ]
+    }
+]
+
+let vm = new Vue({
+    el: '#app',
+    data:{
+        navlist: [
+            {id: 1, name: '导航一'},
+            {id: 2, name: '导航二'}
+        ],
+        menulist: menulist
+    }
+})
+</script>
+</body>
+</html>

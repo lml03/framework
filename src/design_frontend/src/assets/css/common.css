@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.fl {
+  float: left !important;
+}
+
+.fr {
+  float: right !important;
+}
+
+/*清除浮动*/
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.body-overflow {
+  overflow: hidden !important;
+}
+
+.efg {
+  font-weight: bold;
+}

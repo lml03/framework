@@ -1,0 +1,91 @@
+/*头部样式*/
+header{
+  background-color: #211f34;
+}
+.header-center{
+  padding-left: 200px;
+  height: 64px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.nav-list{
+  font-size: 16px;
+  height: 44px;
+  line-height: 44px;
+}
+.nav-list a{
+  display: inline-block;
+  padding: 0 22px;
+  position: relative;
+}
+.nav-list a.current{
+  color: #12e3cd;
+}
+.nav-list a.current::after{
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  background-color: #12e3cd;
+  height: 4px;
+  left: 20px;
+  right: 20px;
+  border-radius: 2px;
+}
+
+
+
+
+
+/*底部样式*/
+footer{
+  background-color: #211f34;
+  justify-content: center;
+}
+.footer-center{
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+/*主体内容样式*/
+.main{
+  background-color: #f0f2f5;
+  padding: 20px;
+  height: 1500px;
+}
+
+
+
+
+
+/*侧栏样式*/
+.sider{
+  background-color: #ffffff;
+}
+.menu-wrap{
+  padding: 10px 0;
+}
+.menu-list>h3,.sub-menu-list>h3{
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.sub-menu-list>h3{
+  text-indent: 2em;
+}
+.menu-list.current>h3{
+  font-weight: bold;
+}
+.sub-menu-list.current>h3{
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
